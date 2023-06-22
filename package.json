@@ -1,0 +1,17 @@
+{
+  "name": "modern-sidebar-menu",
+  "version": "1.0.0",
+  "description": "- Sidebar Menu With Curves Using HTML CSS & JavaScript - With curves using only CSS. - Floating names when hovering over icons.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss assets/scss/styles.scss assets/css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "Olguin Esteban",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "nodemon": "^2.0.22"
+  }
+}

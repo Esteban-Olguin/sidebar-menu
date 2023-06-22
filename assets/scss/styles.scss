@@ -1,0 +1,142 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+$first-color: hsl(248, 74%, 58%);
+$black-color: hsl(248, 24%, 10%);
+$white-color: #fff;
+$body-color: hsl(248, 100%, 99%);
+
+/*========== Font and typography ==========*/
+$body-font: 'Poppins', sans-serif;
+$small-font-size: .813rem;
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+    $small-font-size: .875rem;
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: $body-font;
+    background-color: $body-color;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    margin-inline: 6rem 1rem;
+    padding-block: 2rem;
+}
+
+/*=============== SIDEBAR ===============*/
+.nav {
+    width: 72px;
+    height: max-content;
+    position: fixed;
+    inset: 0;
+    margin: auto 0;
+
+    &__list {
+        position: relative;
+        background-color: $first-color;
+        padding-block: 70px;
+        border-radius: 0 51px 51px 0;
+        display: grid;
+        justify-content: center;
+        row-gap: 2rem;
+    }
+
+    &__link {
+        position: relative;
+        display: inline-flex;
+        padding: 4px;
+        border-radius: 50%;
+        transition: background .4s;
+
+        &:hover .nav__name {
+            opacity: 1;
+            transform: translateX(50px);
+        }
+
+        i {
+            font-size: 1.25rem;
+            color: $white-color;
+            transition: color .4s;
+        }
+    }
+
+    &__name {
+        position: absolute;
+        top: 0;
+        transform: translateX(56px);
+        background-color: $black-color;
+        color: $white-color;
+        font-size: $small-font-size;
+        font-weight: 500;
+        padding: 6px 16px;
+        border-radius: 3rem;
+        pointer-events: none;
+        transition: transform .5s, opacity .5s;
+        opacity: 0;
+    }
+
+    /* Shapes */
+    &__circle-1,
+    &__circle-2 {
+        width: 80px;
+        height: 80px;
+        background-color: $body-color;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        z-index: 10;
+    }
+
+    &__circle-1 {
+        top: -78px;
+    }
+
+    &__circle-2 {
+        bottom: -78px;
+    }
+
+    &__square-1,
+    &__square-2 {
+        width: 35px;
+        height: 40px;
+        background-color: $first-color;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+    }
+
+    &__square-1 {
+        top: -39px;
+    }
+
+    &__square-1 {
+        bottom: -39px;
+    }
+}
+
+/* Active link */
+.active-link {
+    background-color: $white-color;
+
+    i {
+        color: $first-color;
+    }
+}

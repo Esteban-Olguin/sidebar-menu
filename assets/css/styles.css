@@ -1,0 +1,96 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+/*=============== VARIABLES CSS ===============*/
+/*========== Font and typography ==========*/
+/* Responsive typography */
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fbfaff; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+main {
+  margin-inline: 6rem 1rem;
+  padding-block: 2rem; }
+
+/*=============== SIDEBAR ===============*/
+.nav {
+  width: 72px;
+  height: max-content;
+  position: fixed;
+  inset: 0;
+  margin: auto 0;
+  /* Shapes */ }
+  .nav__list {
+    position: relative;
+    background-color: #5a45e3;
+    padding-block: 70px;
+    border-radius: 0 51px 51px 0;
+    display: grid;
+    justify-content: center;
+    row-gap: 2rem; }
+  .nav__link {
+    position: relative;
+    display: inline-flex;
+    padding: 4px;
+    border-radius: 50%;
+    transition: background .4s; }
+    .nav__link:hover .nav__name {
+      opacity: 1;
+      transform: translateX(50px); }
+    .nav__link i {
+      font-size: 1.25rem;
+      color: #fff;
+      transition: color .4s; }
+  .nav__name {
+    position: absolute;
+    top: 0;
+    transform: translateX(56px);
+    background-color: #151320;
+    color: #fff;
+    font-size: 0.813rem;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 3rem;
+    pointer-events: none;
+    transition: transform .5s, opacity .5s;
+    opacity: 0; }
+  .nav__circle-1, .nav__circle-2 {
+    width: 80px;
+    height: 80px;
+    background-color: #fbfaff;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    z-index: 10; }
+  .nav__circle-1 {
+    top: -78px; }
+  .nav__circle-2 {
+    bottom: -78px; }
+  .nav__square-1, .nav__square-2 {
+    width: 35px;
+    height: 40px;
+    background-color: #5a45e3;
+    position: absolute;
+    left: 0;
+    z-index: 1; }
+  .nav__square-1 {
+    top: -39px; }
+  .nav__square-1 {
+    bottom: -39px; }
+
+/* Active link */
+.active-link {
+  background-color: #fff; }
+  .active-link i {
+    color: #5a45e3; }
